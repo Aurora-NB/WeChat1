@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/thefirstpage/demo01",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/dynamicState/dynamicState",
+    "pages/Individuals/Individuals"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,14 +20,14 @@
         "selectedIconPath": "image/home(1).png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "text",
+        "pagePath": "pages/dynamicState/dynamicState",
+        "text": "动态",
         "iconPath": "image/star(2).png",
         "selectedIconPath": "image/star(1).png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "text",
+        "pagePath": "pages/Individuals/Individuals",
+        "text": "个人",
         "iconPath": "image/mine(2).png",
         "selectedIconPath": "image/mine(1).png"
       }
