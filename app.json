@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/thefirstpage/demo01",
+    "pages/theFirstPage/theFirstPage",
     "pages/dynamicState/dynamicState",
     "pages/Individuals/Individuals"
   ],
@@ -14,7 +14,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/thefirstpage/demo01",
+        "pagePath": "pages/theFirstPage/theFirstPage",
         "text": "text",
         "iconPath": "image/home(2).png",
         "selectedIconPath": "image/home(1).png"
