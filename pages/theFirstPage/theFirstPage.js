@@ -1,30 +1,36 @@
 // pages/thefirstpage/demo01.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    listEvent:[{
-      dimension:"你好世界",
-      hasdone:false,
-      time:"2000-08-11"
-    },{
-      dimension:"你好世界",
-      hasdone:false,
-      time:"2000-08-11"
-    },{
-      dimension:"你好世界",
-      hasdone:false,
-      time:"2000-08-11"
-    },{
-      dimension:"你好世界",
-      hasdone:false,
-      time:"2000-08-11"
-    },{
-      dimension:"你好世界",
-      hasdone:false,
-      time:"2000-08-11"
+    listEvent: [{
+      dimension: '事件1',
+      index: 0,
+      hasdone: false,
+      time: "2000-08-11"
+    }, {
+      dimension: "事件2",
+      index: 1,
+      hasdone: false,
+      time: "2000-08-11"
+    }, {
+      dimension: "事件3",
+      index: 2,
+      hasdone: false,
+      time: "2000-08-11"
+    }, {
+      dimension: "事件4",
+      index: 3,
+      hasdone: false,
+      time: "2000-08-11"
+    }, {
+      dimension: "事件5",
+      index: 4,
+      hasdone: false,
+      time: "2000-08-11"
     }]
   },
 
@@ -82,5 +88,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  circleTap: function (e) {
+    app.changeEvent(e,this)
   }
 })

@@ -55,19 +55,43 @@
 /*  */
 .event-top{
   /* background-color: aquamarine; */
+  width: 100%;
   height:10vw ;
   display: flex;
-  border-bottom:black 2vw solid  ;
+  border-bottom:3px solid  #9393932c;
+  background-color:white;
 }
 /* 圆形图片 */
 .cricle{
-  display: flex;
-  width: 10vw;
+  width: 22px;
   padding-right: 1vw;
 }
 .text-dir{
   display: flex;
   width: 80vw;
-  font-size: x-large;
+  font-size: large;
+  margin-left: 10px;
+}
+.events{
+  padding: 5px 10px;
+  border-radius: 4%;
+  display: flex;
+  direction: row;
+  align-items: center;
+  margin: 13rpx;
+  background-color: white;
+  width: 90%;
+  height: 35px;
+}
+.event-continer{
+  background-color: #9393932c;
+  width: 100%;
+  display: flex;
+  direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 7px;
 }
 

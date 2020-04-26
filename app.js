@@ -35,5 +35,40 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  // 用来改变主页事件的状态
+  changeEvent: function(e,t){
+    var list = t.data.listEvent
+    if (list[e.currentTarget.dataset.index].hasdone === false) {
+      var i = list.length - 1
+      var tmp = list[e.currentTarget.dataset.index]
+      list[e.currentTarget.dataset.index].hasdone = !list[e.currentTarget.dataset.index].hasdone
+      if(e.currentTarget.dataset.index !== list.length - 1)
+      if (list[e.currentTarget.dataset.index + 1].hasdone === false ) {
+        for (; i >= 0 && list[i].hasdone === true; i--) {}
+        for (var j = e.currentTarget.dataset.index; j < i; j++) {
+          list[j] = list[j + 1]
+          list[j].index = list[j].index - 1
+        }
+        list[i] = tmp
+        list[i].index = i
+      }
+    }
+    else{
+      var i = e.currentTarget.dataset.index
+      var tmp = list[e.currentTarget.dataset.index]
+      console.log (tmp)
+      list[e.currentTarget.dataset.index].hasdone = !list[e.currentTarget.dataset.index].hasdone
+      for(var j = e.currentTarget.dataset.index;j>0;j--){
+        list[j] = list[j - 1]
+          list[j].index = list[j].index + 1
+      }
+      list[0] =tmp;
+      list[0].index = 0 
+    }
+    console.log(list)
+    t.setData({
+      listEvent: list
+    })
   }
 })
