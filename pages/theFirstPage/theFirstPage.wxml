@@ -1,4 +1,17 @@
 <!-- 音乐组件 -->
-<view class="music">
-
+<view class="music-c">
+  音乐组件
+  
 </view>
+<!-- 下面是事件最上面的框 -->
+<view class="event-top">
+<view>你的日常</view>
+<navigator url= "../newevent/newevent" class="icon-jiahao iconfont plus-css"></navigator>
+</view>
+<!-- 事件的地方 -->
+<view class="events" wx:for="{{listEvent}}" wx:key="*this">
+<view class="text-dir">{{index}}{{item.dimension}}</view>
+<icon wx:if="{{item.hasdone}}" type="{{item.hasdone?'success':'success_no_circle'}}"></icon>
+<image src="../../image/yuan.png" mode="widthFix" class="cricle"></image>
+</view>
+ 

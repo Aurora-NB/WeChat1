@@ -5,7 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    listEvent:[{
+      dimension:"你好世界",
+      hasdone:false,
+      time:"2000-08-11"
+    },{
+      dimension:"你好世界",
+      hasdone:false,
+      time:"2000-08-11"
+    },{
+      dimension:"你好世界",
+      hasdone:false,
+      time:"2000-08-11"
+    },{
+      dimension:"你好世界",
+      hasdone:false,
+      time:"2000-08-11"
+    },{
+      dimension:"你好世界",
+      hasdone:false,
+      time:"2000-08-11"
+    }]
   },
 
   /**
