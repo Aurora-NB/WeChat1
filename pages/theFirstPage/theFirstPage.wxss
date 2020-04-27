@@ -63,7 +63,7 @@
 }
 /* 圆形图片 */
 .cricle{
-  width: 22px;
+  width: 21px;
   padding-right: 1vw;
 }
 .text-dir{
@@ -93,5 +93,22 @@
   justify-content: space-between;
   padding-bottom: 10px;
   padding-top: 7px;
+}
+.tags{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.tag-detail{
+  background-color:#50c1f5f0;
+  height: 40rpx;
+  width: 60rpx;
+  margin:10rpx;
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  font-size: x-small;
 }
 

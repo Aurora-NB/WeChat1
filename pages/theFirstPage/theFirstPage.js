@@ -10,27 +10,32 @@ Page({
       dimension: '事件1',
       index: 0,
       hasdone: false,
-      time: "2000-08-11"
+      time: "2000-08-11",
+      tag: ['健身','运动','开会']
     }, {
       dimension: "事件2",
       index: 1,
       hasdone: false,
-      time: "2000-08-11"
+      time: "2000-08-11",
+      tag: ['健身','运动','开会']
     }, {
       dimension: "事件3",
       index: 2,
       hasdone: false,
-      time: "2000-08-11"
+      time: "2000-08-11",
+      tag: ['健身','运动','开会']
     }, {
       dimension: "事件4",
       index: 3,
       hasdone: false,
-      time: "2000-08-11"
+      time: "2000-08-11",
+      tag: ['健身','运动','开会']
     }, {
       dimension: "事件5",
       index: 4,
       hasdone: false,
-      time: "2000-08-11"
+      time: "2000-08-11",
+      tag: ['健身','运动','开会']
     }]
   },
 

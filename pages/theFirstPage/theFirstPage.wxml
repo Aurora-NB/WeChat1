@@ -1,24 +1,28 @@
-
 <view>
-  <!-- 音乐组件 -->
-  <view class="music-c">
-    音乐组件
-  </view>
+	<!-- 音乐组件 -->
+	<view class="music-c">
+		音乐组件
+	</view>
 
- <!-- 下面是事件最上面的框 -->
-    <view class="event-top">
-      <view>你的日常</view>
-      <navigator url= "../newevent/newevent" class="icon-jiahao iconfont plus-css"></navigator>
-    </view>
-  <view class="event-continer">
-    <!-- 事件的地方 -->
-    <view class="events" wx:for="{{listEvent}}" wx:key="*this">
-      <icon data-index="{{item.index}}" catchtap="circleTap" hidden="{{!item.hasdone}}" type="{{item.hasdone?'success':'success_no_circle'}}"></icon>
-      <image data-index="{{item.index}}" catchtap="circleTap" hidden="{{item.hasdone}}" src="../../image/yuan.png" mode="widthFix" class="cricle"></image>
+	<!-- 下面是事件最上面的框 -->
+	<view class="event-top">
+		<view>你的日常</view>
+		<navigator url="../newevent/newevent" class="icon-jiahao iconfont plus-css"></navigator>
+	</view>
+	<view class="event-continer">
+		<!-- 事件的地方 -->
 
-      <view class="text-dir">{{item.dimension}}</view>
-    </view>
+		<view class="events" wx:for="{{listEvent}}" wx:key="*this">
+			<icon data-index="{{item.index}}" catchtap="circleTap" hidden="{{!item.hasdone}}" type="{{item.hasdone?'success':'success_no_circle'}}"></icon>
+			<image data-index="{{item.index}}" catchtap="circleTap" hidden="{{item.hasdone}}" src="../../image/yuan.png" mode="widthFix" class="cricle"></image>
 
-  </view>
+			<view class="text-dir">{{item.dimension}}</view>
 
- </view>
+			<view class="tags" wx:for="{{item.tag}}">
+				<view class="tag-detail"><text>{{item}}</text></view>
+			</view>
+		</view>
+
+	</view>
+
+</view>

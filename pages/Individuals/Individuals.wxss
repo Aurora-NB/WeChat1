@@ -22,7 +22,7 @@
   height: 150rpx;
   border-radius: 50%;
   background-color: rgb(187, 186, 186);
-  border: 2px solid black; 
+  border: 1px solid black; 
   margin-right: 30rpx;
 }
 .detail{
