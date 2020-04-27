@@ -13,8 +13,8 @@
   <view class="event-continer">
     <!-- 事件的地方 -->
     <view class="events" wx:for="{{listEvent}}" wx:key="*this">
-      <icon data-index="{{item.index}}" bindtap="circleTap" hidden="{{!item.hasdone}}" type="{{item.hasdone?'success':'success_no_circle'}}"></icon>
-      <image data-index="{{item.index}}" bindtap="circleTap" hidden="{{item.hasdone}}" src="../../image/yuan.png" mode="widthFix" class="cricle"></image>
+      <icon data-index="{{item.index}}" catchtap="circleTap" hidden="{{!item.hasdone}}" type="{{item.hasdone?'success':'success_no_circle'}}"></icon>
+      <image data-index="{{item.index}}" catchtap="circleTap" hidden="{{item.hasdone}}" src="../../image/yuan.png" mode="widthFix" class="cricle"></image>
 
       <view class="text-dir">{{item.dimension}}</view>
     </view>

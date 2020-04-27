@@ -92,5 +92,17 @@ Page({
 
   circleTap: function (e) {
     app.changeEvent(e,this)
+    var list = this.data.listEvent
+    var sn = true
+    for(var i=0;i<list.length;i++){
+      if(list[i].hasdone === false) sn = false
+    }
+    if(sn === true) {
+      wx.showToast({
+        title: '你完成了所有日常！',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   }
 })
