@@ -36,6 +36,7 @@ App({
   globalData: {
     userInfo: null
   },
+  
   // 用来改变主页事件的状态
   changeEvent: function(e,t){
     var list = t.data.listEvent

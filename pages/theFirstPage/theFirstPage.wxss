@@ -74,7 +74,7 @@
 }
 .events{
   padding: 5px 10px;
-  border-radius: 4%;
+  border-radius: 1em;
   display: flex;
   direction: row;
   align-items: center;

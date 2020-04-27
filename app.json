@@ -1,8 +1,7 @@
 {
   "pages": [
     "pages/theFirstPage/theFirstPage",
-    "pages/dynamicState/dynamicState",
-    "pages/Individuals/Individuals",
+     "pages/Individuals/Individuals",
     "pages/newevent/newevent"
   ],
   "window": {
@@ -19,12 +18,6 @@
         "text": "主页",
         "iconPath": "image/home(2).png",
         "selectedIconPath": "image/home(1).png"
-      },
-      {
-        "pagePath": "pages/dynamicState/dynamicState",
-        "text": "动态",
-        "iconPath": "image/star(2).png",
-        "selectedIconPath": "image/star(1).png"
       },
       {
         "pagePath": "pages/Individuals/Individuals",
