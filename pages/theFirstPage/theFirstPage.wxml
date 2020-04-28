@@ -13,13 +13,15 @@
 		<!-- 事件的地方 -->
 
 		<view class="events" wx:for="{{listEvent}}" wx:key="*this">
-			<icon data-index="{{item.index}}" catchtap="circleTap" hidden="{{!item.hasdone}}" type="{{item.hasdone?'success':'success_no_circle'}}"></icon>
-			<image data-index="{{item.index}}" catchtap="circleTap" hidden="{{item.hasdone}}" src="../../image/yuan.png" mode="widthFix" class="cricle"></image>
+			<view class="events" catchtap="eventTap" data-index="{{item.index}}">
+				<icon data-index="{{item.index}}" catchtap="circleTap" hidden="{{!item.hasdone}}" type="{{item.hasdone?'success':'success_no_circle'}}"></icon>
+				<image data-index="{{item.index}}" catchtap="circleTap" hidden="{{item.hasdone}}" src="../../image/yuan.png" mode="widthFix" class="cricle"></image>
 
-			<view class="text-dir">{{item.dimension}}</view>
+				<view class="text-dir">{{item.dimension}}</view>
 
-			<view class="tags" wx:for="{{item.tag}}">
-				<view class="tag-detail"><text>{{item}}</text></view>
+				<view class="tags" wx:for="{{item.tag}}">
+					<view class="tag-detail"><text>{{item}}</text></view>
+				</view>
 			</view>
 		</view>
 

@@ -2,7 +2,9 @@
   "pages": [
     "pages/theFirstPage/theFirstPage",
      "pages/Individuals/Individuals",
-    "pages/newevent/newevent"
+    "pages/newevent/newevent",
+    "pages/about/about",
+    "pages/eventDetail/eventDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

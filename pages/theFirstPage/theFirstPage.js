@@ -11,103 +11,65 @@ Page({
       index: 0,
       hasdone: false,
       time: "2000-08-11",
-      tag: ['健身','运动','开会']
+      tag: ['健身', '运动', '开会'],
+      detail: '',
     }, {
       dimension: "事件2",
       index: 1,
       hasdone: false,
       time: "2000-08-11",
-      tag: ['健身','运动','开会']
+      tag: ['健身', '运动', '开会'],
+      detail: '',
     }, {
       dimension: "事件3",
       index: 2,
       hasdone: false,
       time: "2000-08-11",
-      tag: ['健身','运动','开会']
+      tag: ['健身', '运动', '开会'],
+      detail: '',
     }, {
       dimension: "事件4",
       index: 3,
       hasdone: false,
       time: "2000-08-11",
-      tag: ['健身','运动','开会']
+      tag: ['健身', '运动', '开会'],
+      detail: '',
     }, {
       dimension: "事件5",
       index: 4,
       hasdone: false,
       time: "2000-08-11",
-      tag: ['健身','运动','开会']
+      tag: ['健身', '运动', '开会'],
+      detail: '',
     }]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
   circleTap: function (e) {
-    app.changeEvent(e,this)
+    app.changeEvent(e, this)
     var list = this.data.listEvent
     var sn = true
-    for(var i=0;i<list.length;i++){
-      if(list[i].hasdone === false) sn = false
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].hasdone === false) sn = false
     }
-    if(sn === true) {
+    if (sn === true) {
       wx.showToast({
         title: '你完成了所有日常！',
         icon: 'none',
         duration: 2000
       })
     }
+  },
+
+  eventTap: function (e) {
+    console.log(e)
+    var index = e.currentTarget.dataset.index
+    var dimension = this.data.listEvent[index].dimension
+    var hasdone = this.data.listEvent[index].hasdone
+    var time = this.data.listEvent[index].time
+    var detail = this.data.listEvent[index].detail
+    wx.navigateTo({
+      url: '../eventDetail/eventDetail?dimension='+dimension+ '&hasdone=' + hasdone + '&time=' + time + '&detail=' + detail,
+      complete: (res) => {},
+    })
   }
 })
