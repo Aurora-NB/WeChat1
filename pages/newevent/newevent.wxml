@@ -1,2 +1,6 @@
-<!--pages/newevent/newevent.wxml-->
-<text>pages/newevent/newevent.wxml</text>
+<form>  
+  
+  <view class="text-view">
+    <textarea class="text-input" placeholder=" 请在这里输入你的事件"></textarea>
+  </view>
+</form>

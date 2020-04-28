@@ -1,1 +1,12 @@
-/* pages/newevent/newevent.wxss */
+.text-input{
+   width: 90vw;
+   height: 20vw;
+   display: flex;
+   background-color: white;
+}
+.text-view{
+  display: flex;
+  padding-top: 5vw;
+  align-items: center;
+  justify-content: center;
+}
