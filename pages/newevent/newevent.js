@@ -5,6 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
+    listEvent:[{
+      dimension: '1321632',
+      index: 0,
+      hasdone: false,
+      time: "",
+      tag: [''],
+      detail: '',
+    }],
+    tags:[''],
+    imgPath:"../../image/download2.png"
 
   },
 
@@ -12,7 +22,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.index);
+    var listEvent=this.data.listEvent;
+    listEvent[0].index=options.index-0+1;
+    this.setData(
+      {
+        listEvent:listEvent
+      }
+    )
   },
 
   /**
@@ -62,5 +79,44 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  formSubmit: function (e) {
+    wx.reLaunch({
+     url: '../theFirstPage/theFirstPage',
+   })
+  },
+  whenblur(e){
+    var listEvent=this.data.listEvent;
+    listEvent[0].dimension=e.detail.value;
+    this.setData({
+      listEvent:listEvent
+    });
+
+  },
+  biaoqian(e){
+    var tags=this.data.tags;
+    console.log(tags.length); 
+    if(tags.length!=3)
+    tags[tags.length]='';
+    this.setData({
+      tags:tags
+    })
+  },
+  photoload(e){
+    var that=this;
+    if(this.data.imgPath==='../../image/download.png')
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original'],
+      sourceType: ['album'],
+      success: function (res) {
+        //res.tempFilePaths 返回图片本地文件路径列表
+        var tempFilePaths = res.tempFilePaths;
+        that.setData({
+          imgPath: tempFilePaths[0]
+        })
+
+      }
+    });
   }
 })
