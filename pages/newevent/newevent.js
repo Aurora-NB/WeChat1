@@ -5,16 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listEvent:[{
-      dimension: '1321632',
+    listEvent:{
+      dimension: '',
       index: 0,
       hasdone: false,
       time: "",
-      tag: [''],
+      tag: ['','',''],
       detail: '',
-    }],
-    tags:[''],
-    imgPath:"../../image/download2.png"
+      header:''
+    },
+    tags:[],
+    imgPath:"../../image/download2.png",
+    tagsindex:0,
+    baioqianvalue:'',
+    tapexist:[false,false,false]
 
   },
 
@@ -24,10 +28,11 @@ Page({
   onLoad: function (options) {
     console.log(options.index);
     var listEvent=this.data.listEvent;
-    listEvent[0].index=options.index-0+1;
+    listEvent.index=options.index-0+1;
     this.setData(
       {
-        listEvent:listEvent
+        listEvent:listEvent,
+        baioqianvalue:''
       }
     )
   },
@@ -81,13 +86,42 @@ Page({
 
   },
   formSubmit: function (e) {
-    wx.reLaunch({
-     url: '../theFirstPage/theFirstPage',
-   })
+    var n=1;
+    if(this.data.listEvent.dimension===''||this.data.listEvent.header==='')
+    {
+      n=0;
+    }
+    if(n===1){
+    wx.showToast({
+      icon:'none',
+      title: '提交成功',
+      duration: 2000
+    });
+    var tags0=this.data.tags[0]
+    var tags1=this.data.tags[1]
+    var tags2=this.data.tags[2]
+    var index=this.data.listEvent.index-0
+    var dimension=this.data.listEvent.dimension
+    var header=this.data.listEvent.header
+    var imgPath=this.data.listEvent.imgPath
+    setTimeout(function () {
+      //要延时执行的代码
+      wx.reLaunch({
+        url: '../theFirstPage/theFirstPage?tags0='+tags0+'&tags1='+tags1+'&tags2='+tags2+'&index='+index+'&dimension='+dimension+'&header='+header+'&imgPath='+imgPath,
+      })
+     }, 500)}
+    else
+    {
+      wx.showToast({
+        icon:'none',
+        title: '未添加标题或事件请重新添加',
+        duration: 2000
+      });
+    }
   },
   whenblur(e){
     var listEvent=this.data.listEvent;
-    listEvent[0].dimension=e.detail.value;
+    listEvent.dimension=e.detail.value;
     this.setData({
       listEvent:listEvent
     });
@@ -95,9 +129,8 @@ Page({
   },
   biaoqian(e){
     var tags=this.data.tags;
-    console.log(tags.length); 
     if(tags.length!=3)
-    tags[tags.length]='';
+    tags.push('');
     this.setData({
       tags:tags
     })
@@ -117,5 +150,44 @@ Page({
 
       }
     });
+  },
+  biaoqianblur(e){
+  var tags=this.data.tags;
+  var value =e.detail.value;
+  tags[e.target.dataset.index]=value;
+  this.setData({
+    tags:tags
+  });  
+  },
+  headerblur(e){
+
+  },
+  headerblur(e){
+    var listEvent=this.data.listEvent;
+    listEvent.header=e.detail.value;
+    this.setData({
+      listEvent:listEvent
+    })
+  },
+  biaoqianconfim(e){
+    console.log(e);
+    var tags=this.data.tags
+    if(tags.length<3)
+    {
+    tags.push(e.detail.value);
+    this.setData({
+      tags:tags,
+      baioqianvalue:''
+    })
+  }
+
+},
+  deletetap(e){
+    console.log(e);
+    var tags=this.data.tags;
+    tags.splice(e.target.dataset.index,1)
+    this.setData({
+      tags:tags
+    })
   }
 })
