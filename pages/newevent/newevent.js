@@ -104,7 +104,7 @@ Page({
   },
   photoload(e){
     var that=this;
-    if(this.data.imgPath==='../../image/download.png')
+    if(this.data.imgPath==='../../image/download2.png')
     wx.chooseImage({
       count: 1,
       sizeType: ['original'],
