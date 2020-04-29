@@ -1,1 +1,11 @@
-/* pages/about/about.wxss */
+.xingkong{
+  width:100rpx;
+  height:100rpx;
+}
+.about_options{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding: 375rpx;
+  padding-left: 215rpx;
+}

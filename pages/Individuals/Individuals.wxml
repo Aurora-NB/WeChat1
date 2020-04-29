@@ -18,7 +18,7 @@
     </view>
 
     <view class="options">
-     <text  style="font-size:40rpx;">关于</text>
+     <navigator url="../about/about" open-type="navigate">关于</navigator>
      <image src="../../image/arrow.png" class="arrow" ></image>
     </view>
 
