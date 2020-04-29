@@ -1,6 +1,23 @@
-<form>  
-  
-  <view class="text-view">
-    <textarea class="text-input" placeholder=" 请在这里输入你的事件"></textarea>
+<form bindsubmit="formSubmit">  
+    <image class="download" src="{{imgPath}}" mode="widthFix"
+     bindtap="photoload">
+  </image>
+  <view class="header-view">
+    <input class="header-input" placeholder="标题" maxlength="15"></input>
   </view>
+  <view class="text-view" bindtap="">
+    <textarea name="text-input" class="text-input" placeholder="请在这里输入你的事件" bindblur="whenblur" maxlength="114"></textarea>
+  </view>
+  <view class="biaoqian-before">
+  <block wx:for="{{tags}}" wx:key="*this">
+    <view class="icon-shoucang- iconfont icon-class" bindtap="biaoqian"></view>
+    <view class="biaoqian-input"><input placeholder="标签" maxlength="4"></input></view>
+  </block> 
+  <view>
+
+  </view>
+</view>
+<view form-type ="submit" bindtap="formSubmit" class="submit-button" >提交</view>
 </form>
+
+   

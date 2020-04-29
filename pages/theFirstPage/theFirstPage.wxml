@@ -7,7 +7,7 @@
 	<!-- 下面是事件最上面的框 -->
 	<view class="event-top">
 		<view>你的日常</view>
-		<navigator url="../newevent/newevent" class="icon-jiahao iconfont plus-css"></navigator>
+		<navigator url="../newevent/newevent?index={{listEvent[listEvent.length-1].index}}" class="icon-jiahao iconfont plus-css"></navigator>
 	</view>
 	<view class="event-continer">
 		<!-- 事件的地方 -->
