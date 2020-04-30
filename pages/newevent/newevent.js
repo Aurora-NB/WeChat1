@@ -15,7 +15,7 @@ Page({
       header:''
     },
     tags:[],
-    imgPath:"../../image/download2.png",
+    imgPath:"../../image/download1.png",
     tagsindex:0,
     baioqianvalue:'',
     tapexist:[false,false,false]
@@ -86,6 +86,8 @@ Page({
 
   },
   formSubmit: function (e) {
+    console.log(e);
+    
     var n=1;
     if(this.data.listEvent.dimension===''||this.data.listEvent.header==='')
     {

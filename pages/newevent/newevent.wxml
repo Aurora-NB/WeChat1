@@ -11,18 +11,18 @@
 <!-- 标签事件的循环 -->
   <block wx:for="{{tags}}" wx:key="*this">
     <view class="icon-shoucang- iconfont icon-class" bindtap="biaoqian"></view>
-    <view class="biaoqian-input"><input placeholder="标签" bindblur="biaoqianblur" maxlength="7" data-index="{{index}}" value="{{tags[index]}}"></input></view>
+    <view  class="biaoqian-input"><input name="tapinput{{index}}" placeholder="标签" bindblur="biaoqianblur" maxlength="7" data-index="{{index}}" value="{{tags[index]}}"></input></view>
     <view class="deletebiaoqian iconfont icon-ziyuan" bindtap="deletetap" data-index="{{index}}"></view>
   </block> 
 <!-- 标签输入的循环 -->
   <view class="biaoqianview" >
-    <input wx:if="{{tags.length<3}}" class="biaoqianinput" placeholder="在这里输入标签" bindconfirm="biaoqianconfim" value="{{baioqianvalue}}" maxlength="7">
+    <input  wx:if="{{tags.length<3}}" class="biaoqianinput" placeholder="在这里输入标签" bindconfirm="biaoqianconfim" value="{{baioqianvalue}}" maxlength="7">
     </input>
   </view>
 </view>
   <!-- 事件主体 -->
   <view class="text-view" bindtap="">
-    <textarea name="text-input" class="text-input" placeholder="请在这里输入你的事件" bindblur="whenblur" maxlength="114" value="{{listEvent.dimension}}"></textarea>
+    <textarea name="textinput" class="text-input" placeholder="请在这里输入你的事件" bindblur="whenblur" maxlength="114" value="{{listEvent.dimension}}"></textarea>
   </view>
  <!-- 图片上传 -->
  <view>
