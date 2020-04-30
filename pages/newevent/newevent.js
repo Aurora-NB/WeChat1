@@ -86,9 +86,9 @@ Page({
   onShareAppMessage: function () {
 
   },
+  // 页面数据提交的函数
   formSubmit: function (e) {
     console.log(e);
-
     var n = 1;
     if (this.data.listEvent.dimension === '' || this.data.listEvent.header === '') {
       n = 0;
@@ -120,16 +120,18 @@ Page({
       });
     }
   },
+  // 当输入事件的事件的光标消失时的事件
   whenblur(e) {
-    var listEvent = this.data.listEvent;
-    listEvent.dimension = e.detail.value;
+    var listEvent = this.data.listEvent
+    listEvent.dimension = e.detail.value
     this.setData({
       listEvent: listEvent
     });
 
   },
+  //标签光标消失的事件
   biaoqian(e) {
-    console.log(e);
+    console.log(e)
     var tags = this.data.tags
     var tagscolor = this.data.tagscolor
     tagscolor.sort(function () {
@@ -144,8 +146,9 @@ Page({
       })
     }
   },
+  //图片简单的上传操作
   photoload(e) {
-    var that = this;
+    var that = this
     wx.chooseImage({
       count: 1,
       sizeType: ['original'],
@@ -160,9 +163,10 @@ Page({
       }
     });
   },
+  //输入得到标签的样式
   biaoqianblur(e) {
-    var tags = this.data.tags;
-    var value = e.detail.value;
+    var tags = this.data.tags
+    var value = e.detail.value
     tags[e.target.dataset.index] = value;
     this.setData({
       tags: tags
@@ -175,8 +179,9 @@ Page({
       listEvent: listEvent
     })
   },
+  // 当标签提交的样式
   biaoqianconfim(e) {
-    console.log(e);
+    console.log(e)
     var tags = this.data.tags
     var tagscolor = this.data.tagscolor
     var tagsmirrorcolor = this.data.tagsmirrorcolor
@@ -185,7 +190,7 @@ Page({
     });
     if (tags.length < 3) {
       tagsmirrorcolor.push(tagscolor[tags.length])
-      tags.push(e.detail.value);
+      tags.push(e.detail.value)
       this.setData({
         tags: tags,
         baioqianvalue: '',
@@ -195,9 +200,10 @@ Page({
     }
 
   },
+  // 删除标签的函数
   deletetap(e) {
-    console.log(e);
-    var tags = this.data.tags;
+    console.log(e)
+    var tags = this.data.tags
     var tagsmirrorcolor = this.data.tagsmirrorcolor
     tagsmirrorcolor.splice(e.target.dataset.index, 1)
     tags.splice(e.target.dataset.index, 1)
