@@ -1,4 +1,4 @@
 <view class="about_options">
-<image src="../../image/mainIcon.png" class="xingkong"></image>
-©Aurora团队
+	<image src="../../image/mainIcon.png" class="xingkong"></image>
+	©Aurora团队
 </view>

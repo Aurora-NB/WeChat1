@@ -1,8 +1,9 @@
-.xingkong{
-  width:100rpx;
-  height:100rpx;
+.xingkong {
+  width: 100rpx;
+  height: 100rpx;
 }
-.about_options{
+
+.about_options {
   width: 90%;
   display: flex;
   align-items: center;

@@ -1,5 +1,5 @@
 /* pages/eventDetail/eventDetail.wxss */
-.h{
+.h {
   text-align: center;
   margin: 10px auto;
   width: 90%;
@@ -8,48 +8,58 @@
   border: 1px solid red;
   line-height: 70rpx;
 }
-.butn{
+
+.butn {
   height: 50rpx;
   border-radius: 25rpx;
 }
-.title{
+
+.title {
   background-color: rgba(255, 0, 0, 0.337);
-  width: 420rpx ;
+  width: 420rpx;
   margin: 10rpx 20rpx 10rpx 20rpx;
   text-align: center;
   line-height: 50rpx;
   padding-right: 10rpx;
 }
-.time{
+
+.time {
   width: 280rpx;
-  background-color:rgba(54, 127, 196, 0.419);
+  background-color: rgba(54, 127, 196, 0.419);
   text-align: center;
   line-height: 50rpx;
-  margin:10rpx 20rpx 10rpx 0;
+  margin: 10rpx 20rpx 10rpx 0;
 }
-.flex-wrp {display: flex;}
-textarea{
+
+.flex-wrp {
+  display: flex;
+}
+
+textarea {
   margin: 20px;
   width: 90%;
   height: 10em;
-  align-items:center ;
+  align-items: center;
   height: auto;
   border: black;
 }
+
 /* 横着的分割View样式 */
 /*分割线样式*/
-.divLine{
+.divLine {
   background: #E0E3DA;
   width: 100%;
   height: 10rpx;
- }
+}
 
- 
+
 /* 分隔线--底部 */
-.line{
-  width: 90%;    /* 分隔线的长度 */
+.line {
+  width: 90%;
+  /* 分隔线的长度 */
   margin: auto;
-  height: 1px;    /* 分隔线粗细 */
+  height: 1px;
+  /* 分隔线粗细 */
   text-align: center;
   font-size: 24rpx;
   color: #aaa;
@@ -57,7 +67,8 @@ textarea{
   margin-top: 5px;
   margin-bottom: 22px;
 }
-.line span{
+
+.line span {
 
   position: relative;
   top: -8px;

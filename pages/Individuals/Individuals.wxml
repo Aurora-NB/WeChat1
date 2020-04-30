@@ -1,27 +1,26 @@
+<view class="individuals">
 
- <view class="individuals">
+	<view class="user">
 
-  <view class="user">
-  
-    <image src="../../image/userhead.png" class="userhead" src="{{userInfo.avatarUrl}}"></image>
-    <view class="detail">
-      <text style="font-size:50rpx;"  wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</text>
-      <text style="font-size:50rpx;"  wx:if="{{!(!hasUserInfo && canIUse)}}">{{userInfo.nickName}}</text>
-      <text style="font-size:30rpx;color:#918597;">仅支持微信登录</text>
-    </view>
-  </view>
+		<image src="../../image/userhead.png" class="userhead" src="{{userInfo.avatarUrl}}"></image>
+		<view class="detail">
+			<text style="font-size:50rpx;"  wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</text>
+			<text style="font-size:50rpx;"  wx:if="{{!(!hasUserInfo && canIUse)}}">{{userInfo.nickName}}</text>
+			<text style="font-size:30rpx;color:#918597;">仅支持微信登录</text>
+		</view>
+	</view>
 
-  <view class="other-options">
-    <view class="options">
-      <text  style="font-size:40rpx;">分享小程序</text>
-      <image src="../../image/arrow.png" class="arrow"></image>
-    </view>
+	<view class="other-options">
+		<view class="options">
+			<text  style="font-size:40rpx;">分享小程序</text>
+			<image src="../../image/arrow.png" class="arrow"></image>
+		</view>
 
-    <view class="options">
-     <navigator url="../about/about" open-type="navigate">关于</navigator>
-     <image src="../../image/arrow.png" class="arrow" ></image>
-    </view>
+		<view class="options">
+			<navigator url="../about/about" open-type="navigate">关于</navigator>
+			<image src="../../image/arrow.png" class="arrow"></image>
+		</view>
 
-  </view>
+	</view>
 
 </view>

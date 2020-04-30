@@ -1,40 +1,37 @@
 <!-- 整个表单 -->
-<form bindsubmit="formSubmit">  
+<form bindsubmit="formSubmit">
 
-  <!--标题的输入  -->
-  <view class="header-view">
-    <input bindblur="headerblur" class="header-input" placeholder="标题" maxlength="15" value="{{listEvent.header}}"></input>
+	<!--标题的输入  -->
+	<view class="header-view">
+		<input bindblur="headerblur" class="header-input" placeholder="标题" maxlength="15" value="{{listEvent.header}}"></input>
 
-  </view>
-<!-- 标签 -->
-<view class="biaoqian-before">
-<!-- 标签事件的循环 -->
-  <block  wx:for="{{tags}}" wx:key="*this">
-  <view class="icon-evnet" style="background-color:{{tagsmirrorcolor[index]}};">
-    <view class="icon-shoucang- iconfont icon-class" bindtap="biaoqian"></view>
-    <view  class="biaoqian-input"><input name="tapinput{{index}}" placeholder="标签" bindblur="biaoqianblur" maxlength="7" data-index="{{index}}" value="{{tags[index]}}"></input></view>
-    <view class="deletebiaoqian iconfont icon-ziyuan" bindtap="deletetap" data-index="{{index}}"></view>
-  </view> 
-  </block> 
-  
-<!-- 标签输入的循环 -->
-  <view class="biaoqianview" >
-    <input  wx:if="{{tags.length<3}}" class="biaoqianinput" placeholder="在这里输入标签" bindconfirm="biaoqianconfim" value="{{baioqianvalue}}" maxlength="7">
-    </input>
-  </view>
-</view>
-  <!-- 事件主体 -->
-  <view class="text-view" bindtap="">
-    <textarea name="textinput" class="text-input" placeholder="请在这里输入你的事件" bindblur="whenblur" maxlength="114" value="{{listEvent.dimension}}"></textarea>
-  </view>
- <!-- 图片上传 -->
- <view>
-  <image class="download" src="{{imgPath}}" mode="widthFix"
-    bindtap="photoload">
-  </image>
-  </view>
-<!-- 提交按钮 -->
-<view form-type ="submit" bindtap="formSubmit" class="submit-button" >提交</view>
+	</view>
+	<!-- 标签 -->
+	<view class="biaoqian-before">
+		<!-- 标签事件的循环 -->
+		<block wx:for="{{tags}}" wx:key="*this">
+			<view class="icon-evnet" style="background-color:{{tagsmirrorcolor[index]}};">
+				<view class="icon-shoucang- iconfont icon-class" bindtap="biaoqian"></view>
+				<view class="biaoqian-input"><input name="tapinput{{index}}" placeholder="标签" bindblur="biaoqianblur" maxlength="7" data-index="{{index}}" value="{{tags[index]}}"></input></view>
+				<view class="deletebiaoqian iconfont icon-ziyuan" bindtap="deletetap" data-index="{{index}}"></view>
+			</view>
+		</block>
+
+		<!-- 标签输入的循环 -->
+		<view class="biaoqianview">
+			<input wx:if="{{tags.length<3}}" class="biaoqianinput" placeholder="在这里输入标签" bindconfirm="biaoqianconfim" value="{{baioqianvalue}}" maxlength="7">
+			</input>
+		</view>
+	</view>
+	<!-- 事件主体 -->
+	<view class="text-view" bindtap="">
+		<textarea name="textinput" class="text-input" placeholder="请在这里输入你的事件" bindblur="whenblur" maxlength="114" value="{{listEvent.dimension}}"></textarea>
+	</view>
+	<!-- 图片上传 -->
+	<view>
+		<image class="download" src="{{imgPath}}" mode="widthFix" bindtap="photoload">
+		</image>
+	</view>
+	<!-- 提交按钮 -->
+	<view form-type="submit" bindtap="formSubmit" class="submit-button">提交</view>
 </form>
-
-   

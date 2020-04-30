@@ -2,26 +2,27 @@
 
 <view class="h">详情</view>
 <view style="display: flex;">
-  <view class="title butn">标题<icon type="waiting" style="float:right; "></icon></view>
-  <view class="time butn">时间</view>
+	<view class="title butn">标题<icon type="waiting" style="float:right; "></icon>
+	</view>
+	<view class="time butn">时间</view>
 </view>
-     <!-- 分割线 -->
-  <view class="line"></view>
-  <from>
-<view>
-<textarea placeholder="详情" auto-height="true" maxlength="-1" >
+<!-- 分割线 -->
+<view class="line"></view>
+<from>
+	<view>
+		<textarea placeholder="详情" auto-height="true" maxlength="-1">
 
 </textarea>
 
-<view style="height:50px"></view>
-<view class="line">
-  <span>到底啦，我是有底线的</span>
-</view>
-</view>
+		<view style="height:50px"></view>
+		<view class="line">
+			<span>到底啦，我是有底线的</span>
+		</view>
+	</view>
 
-<view >
-  <button plain="true" class="butn1" style="width:80vw;margin:5px auto; background-color:red; color:white;">保存</button>
-  <button plain="true" class="butn1" style="width:80vw;margin:5px auto;background-color:green;color:white;">已完成</button> 
-  <button plain="true" class="butn1" style="width:80vw;margin:5px auto;background-color:black;color:white;">删除</button>
-</view>
+	<view>
+		<button plain="true" class="butn1" style="width:80vw;margin:5px auto; background-color:red; color:white;">保存</button>
+		<button plain="true" class="butn1" style="width:80vw;margin:5px auto;background-color:green;color:white;">已完成</button>
+		<button plain="true" class="butn1" style="width:80vw;margin:5px auto;background-color:black;color:white;">删除</button>
+	</view>
 </from>
