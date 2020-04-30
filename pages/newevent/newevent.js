@@ -18,7 +18,10 @@ Page({
     imgPath:"../../image/download1.png",
     tagsindex:0,
     baioqianvalue:'',
-    tapexist:[false,false,false]
+    tapexist:[false,false,false],
+    tagscolor:['rgb(39,106,132)','rgb(55,131,161)','rgb(119,119,119)','rgb(34,167,242)','rgb(0,178,106)'],
+    tagsmirrorcolor:[],
+    colorindex:0
 
   },
 
@@ -130,12 +133,21 @@ Page({
 
   },
   biaoqian(e){
-    var tags=this.data.tags;
-    if(tags.length!=3)
-    tags.push('');
+    console.log(e);
+    var tags=this.data.tags
+    var tagscolor=this.data.tagscolor
+    tagscolor.sort(function(){
+       return Math.random() - 0.5;
+    });
+    if(tags.length<3)
+    {
+    tags.push(e.detail.value);
     this.setData({
-      tags:tags
+      tags:tags,
+      baioqianvalue:'',
+      tagscolor:tagscolor
     })
+  }
   },
   photoload(e){
     var that=this;
@@ -162,9 +174,6 @@ Page({
   });  
   },
   headerblur(e){
-
-  },
-  headerblur(e){
     var listEvent=this.data.listEvent;
     listEvent.header=e.detail.value;
     this.setData({
@@ -174,12 +183,20 @@ Page({
   biaoqianconfim(e){
     console.log(e);
     var tags=this.data.tags
+    var tagscolor=this.data.tagscolor
+    var tagsmirrorcolor=this.data.tagsmirrorcolor
+    tagscolor.sort(function(){
+       return Math.random() - 0.5;
+    });
     if(tags.length<3)
     {
+    tagsmirrorcolor.push(tagscolor[tags.length])
     tags.push(e.detail.value);
     this.setData({
       tags:tags,
-      baioqianvalue:''
+      baioqianvalue:'',
+      tagscolor:tagscolor,
+      tagsmirrorcolor:tagsmirrorcolor
     })
   }
 
@@ -187,9 +204,12 @@ Page({
   deletetap(e){
     console.log(e);
     var tags=this.data.tags;
+    var tagsmirrorcolor=this.data.tagsmirrorcolor
+    tagsmirrorcolor.splice(e.target.dataset.index,1)
     tags.splice(e.target.dataset.index,1)
     this.setData({
-      tags:tags
+      tags:tags,
+      tagsmirrorcolor:tagsmirrorcolor
     })
   }
 })

@@ -1,3 +1,4 @@
+/*此处是标签的图标样式 */
 @font-face {font-family: "iconfont";
   src: url('//at.alicdn.com/t/font_1789111_dwfbszgyisb.eot?t=1588171437722'); /* IE9 */
   src: url('//at.alicdn.com/t/font_1789111_dwfbszgyisb.eot?t=1588171437722#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -6,7 +7,6 @@
   url('//at.alicdn.com/t/font_1789111_dwfbszgyisb.ttf?t=1588171437722') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
   url('//at.alicdn.com/t/font_1789111_dwfbszgyisb.svg?t=1588171437722#iconfont') format('svg'); /* iOS 4.1- */
 }
-
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 6vw;
@@ -14,30 +14,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-shoucang-:before {
   content: "\e650";
 }
-
 .icon-shoucang--copy:before {
   content: "\e651";
 }
-
 .icon-ziyuan-copy:before {
   content: "\e652";
 }
-
 .icon-ziyuan:before {
   content: "\e615";
 }
-
 .icon-class{
   width: 6vw;
   display: inline-block;
 }
+/* 事件的输入 */
 .text-input{
    width: 96vw;
-   height: 27vw;
+   height: 30vw;
    display: flex;
    font-weight: 400;
    /* background-color:olivedrab; */
@@ -49,6 +45,7 @@
   align-items: center;
   justify-content: center;
 }
+/* 提交按钮的样式 */
 .submit-button{
   width: 15vw;
   height: 10vw;
@@ -66,6 +63,7 @@
   left: -4vw;
 
 }
+/* 标签摁下回车符以后的样式 */
 .biaoqian-input{
   width: 18vw;
   padding-right:2vw ;
@@ -80,6 +78,7 @@
   padding-right: 2%;
   padding-top: 1.5vw;
 }
+/* 标题输入框的样式 */
 .header-input{
   min-height: 8vw;
   font-size:6vw ;
@@ -89,8 +88,9 @@
   padding-right: 2vw;
   padding-bottom: 1vw;
 }
+/* 图片下载的样式 */
 .download{
-  padding-left: 3vw;
+  padding-left: 25vw;
   width: 50vw;
 }
 .header-view{
@@ -101,6 +101,7 @@
 /* page{
   background-color: black;
 } */
+/* 标签摁下回车符之后的样式 */
 .biaoqianinput{
   width: 32vw;
   font-weight: 500;
@@ -111,7 +112,13 @@
   display: inline-block;
   width: 32vw;
 }
+/* 删除标签的样式 */
 .deletebiaoqian{
   display: inline-block;
 
+}
+/*  */
+.icon-evnet{
+  display: inline-block;
+  border-radius: 1em;
 }

@@ -9,11 +9,14 @@
 <!-- 标签 -->
 <view class="biaoqian-before">
 <!-- 标签事件的循环 -->
-  <block wx:for="{{tags}}" wx:key="*this">
+  <block  wx:for="{{tags}}" wx:key="*this">
+  <view class="icon-evnet" style="background-color:{{tagsmirrorcolor[index]}};">
     <view class="icon-shoucang- iconfont icon-class" bindtap="biaoqian"></view>
     <view  class="biaoqian-input"><input name="tapinput{{index}}" placeholder="标签" bindblur="biaoqianblur" maxlength="7" data-index="{{index}}" value="{{tags[index]}}"></input></view>
     <view class="deletebiaoqian iconfont icon-ziyuan" bindtap="deletetap" data-index="{{index}}"></view>
+  </view> 
   </block> 
+  
 <!-- 标签输入的循环 -->
   <view class="biaoqianview" >
     <input  wx:if="{{tags.length<3}}" class="biaoqianinput" placeholder="在这里输入标签" bindconfirm="biaoqianconfim" value="{{baioqianvalue}}" maxlength="7">
